@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--for(int n:num)-->
+      <div >
+        <table border="1">
+          <thead>
+              <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>email</td>
+                    <td>location</td>
+              </tr>
+          </thead>
+            <tbody>
+            <tr th:each="emp : ${totalemployeesDetails}">
+              <td th:text="*{emp.id}"></td>
+              <td th:text="*{emp.name}"></td>
+              <td th:text="*{emp.email}"></td>
+              <td th:text="*{emp.location}"></td>
+
+            </tr>
+            </tbody>
+
+        </table>
+      </div>
+
+</body>
+</html>
